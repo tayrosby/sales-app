@@ -30,7 +30,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
 	public UserModel findBy(UserModel user) 
 	{
 		//Sql query
-		String sql = "SELECT * FROM USERS WHERE USERNAME = ? AND PASSWORD = ?";
+		String sql = "SELECT * FROM users WHERE USERNAME = ? AND PASSWORD = ?";
 		//Creating a new user to be returned regardless of query result
 		UserModel foundUser = new UserModel();
 
@@ -64,7 +64,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
 	public List<UserModel> findAll() 
 	{
 		//Sql query
-		String sql = "SELECT * FROM USERS";
+		String sql = "SELECT * FROM users";
 		//An arraylist to be returned to the business service regardless of the query result
 		ArrayList<UserModel> users = new ArrayList<>();
 
@@ -118,7 +118,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
 		int rows= 0;
 		
 		//Sql query
-		String sql = "INSERT INTO USERS(FIRSTNAME, LASTNAME, USERNAME, PASSWORD, ROLE, STATUS) VALUES (?, ?, ?, ?, ?,?)";
+		String sql = "INSERT INTO users(FIRSTNAME, LASTNAME, USERNAME, PASSWORD, ROLE, STATUS) VALUES (?, ?, ?, ?, ?,?)";
 		
 		//Attempts to add a product to the database
 		try
@@ -179,7 +179,7 @@ public class UserDataService implements DataAccessInterface<UserModel> {
 	public UserModel findByString(String search) 
 	{
 		//SQL statement
-		String sql = "SELECT * FROM USERS WHERE USERNAME = ?";
+		String sql = "SELECT * FROM users WHERE USERNAME = ?";
 
 		//User to be returned regardless of query result
 		UserModel foundUser = new UserModel();
